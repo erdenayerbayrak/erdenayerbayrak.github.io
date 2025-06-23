@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alanya Boya Ustası - İç & Dış Cephe Boyama Hizmeti</title>
+  <meta name="description" content="Alanya'nın en iyi boya ustası ile profesyonel iç cephe, dış cephe ve dekoratif boya hizmetleri. WhatsApp'tan hemen iletişime geçin!">
+  <meta name="keywords" content="alanya boya ustası, alanya boyacı, iç cephe boyası, dış cephe, dekoratif boya">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #3498db;
+      --secondary: #e74c3c;
+      --dark: #2c3e50;
+      --light: #ecf0f1;
+      --instagram: #E1306C;
+      --whatsapp: #25D366;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfcf9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, var(--dark), #1a2530);
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: "";
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
+      opacity: 0.4;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    .header-content h1 {
+      font-size: 2.8em;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    }
+    .header-content p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+    }
+    .cta-button {
+      background: var(--whatsapp);
+      color: white;
+      padding: 12px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+      display: inline-block;
+    }
+    .cta-button:hover {
+      background: #128C7E;
+      transform: scale(1.05);
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: var(--dark);
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2em;
+      position: relative;
+    }
+    h2::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      margin: 15px auto 0;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+    .service-box {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 12px;
+      flex: 1 1 250px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    .service-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    .service-box i {
+      font-size: 2.5em;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    .service-box h3 {
+      color: var(--dark);
+      font-size: 1.3em;
+      margin-bottom: 10px;
+    }
+    .service-box p {
+      color: #666;
+      font-size: 0.95em;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      transition: transform 0.5s;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .about {
+      background: var(--light);
+      padding: 50px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .about p {
+      font-size: 1.1em;
+      color: #444;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .contact-form {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: 'Inter', sans-serif;
+    }
+    .contact-form textarea {
+      min-height: 150px;
+    }
+    .contact-form button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 1.1em;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.3s;
+    }
+    .contact-form button:hover {
+      background: #2980b9;
+    }
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--whatsapp);
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      text-decoration: none;
+      z-index: 999;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+      transition: transform 0.3s;
+    }
+    .instagram-btn {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      background: var(--instagram);
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      text-decoration: none;
+      z-index: 999;
+      box-shadow: 0 4px 12px rgba(225, 48, 108, 0.3);
+      transition: transform 0.3s;
+    }
+    .whatsapp-btn:hover,
+    .instagram-btn:hover {
+      transform: scale(1.1);
+    }
+    footer {
+      text-align: center;
+      background: var(--dark);
+      color: white;
+      padding: 30px;
+      margin-top: 60px;
+    }
+    @media (max-width: 768px) {
+      header {
+        height: 60vh;
+      }
+      .header-content h1 {
+        font-size: 2em;
+      }
+      .services {
+        flex-direction: column;
+      }
+      .service-box {
+        flex: 1 1 100%;
+      }
+      .whatsapp-btn,
+      .instagram-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+      }
+      .instagram-btn {
+        bottom: 90px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Sosyal Medya Butonları -->
+<a class="instagram-btn" href="https://instagram.com/kullaniciadiniz" target="_blank" aria-label="Instagram">
+  <i class="fab fa-instagram"></i>
+</a>
+
+<a class="whatsapp-btn" href="https://wa.me/905555555555" target="_blank" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Header -->
+<header>
+  <div class="header-content">
+    <h1>Alanya'nın Profesyonel Boya Ekibi</h1>
+    <p>15 yıllık deneyimle hizmetinizdeyiz</p>
+    <a href="https://wa.me/905555555555" class="cta-button" target="_blank">
+      <i class="fab fa-whatsapp"></i> Hemen WhatsApp'tan Teklif Al
+    </a>
+  </div>
+</header>
+
+<!-- Hizmetler -->
+<section>
+  <h2>Hizmetlerimiz</h2>
+  <div class="services">
+    <div class="service-box">
+      <i class="fas fa-paint-roller"></i>
+      <h3>İç Cephe Boyası</h3>
+      <p>Su bazlı sağlıklı boyalar ile kaliteli uygulama</p>
+    </div>
+    <div class="service-box">
+      <i class="fas fa-home"></i>
+      <h3>Dış Cephe Boyası</h3>
+      <p>Hava koşullarına dayanıklı özel boyalar</p>
+    </div>
+    <div class="service-box">
+      <i class="fas fa-brush"></i>
+      <h3>Dekoratif Boya</h3>
+      <p>Özel dokulu modern uygulamalar</p>
+    </div>
+    <div class="service-box">
+      <i class="fas fa-palette"></i>
+      <h3>Renk Danışmanlığı</h3>
+      <p>Mekanınıza en uygun renk seçimi</p>
+    </div>
+    <div class="service-box">
+      <i class="fas fa-water"></i>
+      <h3>Küf/Nem Temizliği</h3>
+      <p>Kalıcı çözümlerle sağlıklı yaşam alanları</p>
+    </div>
+  </div>
+</section>
+
+<!-- Galeri -->
+<section>
+  <h2>Örnek İşler</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1593062096033-9a26b09da705?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="İç cephe boya örneği">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Dış cephe boyama işi">
+    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Dekoratif boya uygulaması">
+  </div>
+</section>
+
+<!-- Hakkımızda -->
+<section class="about">
+  <h2>Hakkımızda</h2>
+  <p>Alanya Boya Ustası olarak 15 yılı aşkın süredir bölgede profesyonel boya hizmetleri sunmaktayız. Uzman ekibimizle birlikte, her türlü iç ve dış cephe boyama işlerinizde kaliteli malzemeler ve işçilik garantisi sağlıyoruz. Müşteri memnuniyetini ön planda tutarak, evinize veya iş yerinize en uygun renk ve dokuyu belirlemenizde size rehberlik ediyoruz.</p>
+</section>
+
+<!-- İletişim Formu -->
+<section id="contact">
+  <h2>İletişim</h2>
+  <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+    <input type="text" name="name" placeholder="Adınız Soyadınız" required>
+    <input type="tel" name="phone" placeholder="Telefon Numaranız" required>
+    <input type="email" name="email" placeholder="E-posta Adresiniz">
+    <textarea name="message" placeholder="Projeniz hakkında bilgi verir misiniz?" required></textarea>
+    <button type="submit">GÖNDER</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 Alanya Boya Ustası - Tüm Hakları Saklıdır.
+</footer>
+
+<!-- Form Gönderim Scripti -->
+<script>
+  window.onload = function() {
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        alert('Teşekkürler! En kısa sürede sizinle iletişime geçeceğiz.');
+        form.reset();
+        // WhatsApp'a yönlendirme (opsiyonel)
+        window.open('https://wa.me/905555555555', '_blank');
+      })
+      .catch(error => {
+        alert('Bir hata oluştu. Lütfen WhatsApp üzerinden iletişime geçin: 0555 555 55 55');
+      });
+    });
+  };
+</script>
+
+</body>
+</html>
