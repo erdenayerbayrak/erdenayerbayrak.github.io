@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesyonel Boya Ustası - Kaliteli Boya Hizmetleri</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables for Color Palette */
+        :root {
+            --primary-color: #FF6B35;
+            --secondary-color: #F7931E;
+            --accent-color: #FFD23F;
+            --dark-blue: #004E89;
+            --light-blue: #1A659E;
+            --purple: #9A4AE2;
+            --pink: #FF4081;
+            --green: #4CAF50;
+            --white: #FFFFFF;
+            --light-gray: #F8F9FA;
+            --dark-gray: #343A40;
+            --gradient-primary: linear-gradient(135deg, #FF6B35, #F7931E);
+            --gradient-secondary: linear-gradient(135deg, #004E89, #1A659E);
+            --gradient-accent: linear-gradient(135deg, #9A4AE2, #FF4081);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.2);
+            --border-radius: 15px;
+            --transition: all 0.3s ease;
+        }
+
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Navigation */
+        .custom-navbar {
+            background: var(--gradient-secondary) !important;
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .custom-navbar.scrolled {
+            padding: 0.5rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white) !important;
+            text-decoration: none;
+        }
+
+        .brand-text {
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--white) !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--accent-color) !important;
+            transform: translateY(-2px);
+        }
+
+        .navbar-nav .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .navbar-nav .nav-link:hover:after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            background: var(--gradient-secondary);
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 78, 137, 0.1);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: var(--white);
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-title .highlight {
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            margin-bottom: 3rem;
+        }
+
+        .btn-hero {
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 50px;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary.btn-hero {
+            background: var(--gradient-primary);
+            border: none;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary.btn-hero:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-outline-light.btn-hero {
+            border-color: var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline-light.btn-hero:hover {
+            background: var(--white);
+            color: var(--dark-blue);
+            transform: translateY(-3px);
+        }
+
+        .hero-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        .feature-item i {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        /* Paint Drops Animation */
+        .paint-drops {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .drop {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50% 50% 50% 0;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.7;
+        }
+
+        .drop-1 {
+            background: var(--primary-color);
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .drop-2 {
+            background: var(--secondary-color);
+            top: 40%;
+            left: 20%;
+            animation-delay: 1s;
+        }
+
+        .drop-3 {
+            background: var(--accent-color);
+            top: 60%;
+            left: 15%;
+            animation-delay: 2s;
+        }
+
+        .drop-4 {
+            background: var(--purple);
+            top: 30%;
+            left: 80%;
+            animation-delay: 3s;
+        }
+
+        .drop-5 {
+            background: var(--pink);
+            top: 70%;
+            left: 85%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        /* Hero Image */
+        .hero-image {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .paint-brush-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .paint-brush-icon {
+            font-size: 12rem;
+            color: var(--accent-color);
+            animation: brushMove 4s ease-in-out infinite;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+        }
+
+        .brush-stroke {
+            position: absolute;
+            top: 50%;
+            left: 120%;
+            width: 200px;
+            height: 20px;
+            background: var(--gradient-primary);
+            border-radius: 10px;
+            opacity: 0.8;
+            animation: strokeGrow 4s ease-in-out infinite;
+        }
+
+        @keyframes brushMove {
+            0%, 100% { transform: rotate(-10deg) translateX(0); }
+            50% { transform: rotate(10deg) translateX(10px); }
+        }
+
+        @keyframes strokeGrow {
+            0% { width: 0; opacity: 0; }
+            50% { width: 200px; opacity: 0.8; }
+            100% { width: 150px; opacity: 0.6; }
+        }
+
+        /* Services Section */
+        .services-section {
+            background: var(--light-gray);
+            position: relative;
+        }
+
+        .services-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--dark-blue), transparent);
+            opacity: 0.1;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .service-card h4 {
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: #666;
+            display: flex;
+            align-items: center;
+        }
+
+        .service-features li i {
+            color: var(--green);
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            background: var(--white);
+        }
+
+        .gallery-item {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 300px;
+            position: relative;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 78, 137, 0.8), rgba(26, 101, 158, 0.8));
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay h5 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            color: var(--white);
+        }
+
+        .gallery-overlay p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--light-gray);
+            position: relative;
+        }
+
+        .contact-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
+            color: var(--white);
+        }
+
+        .contact-card h4 {
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+
+        .contact-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .contact-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .contact-link:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Contact Form */
+        .contact-form-card {
+            background: var(--white);
+            padding: 3rem 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+        }
+
+        .contact-form-card h3 {
+            color: var(--dark-blue);
+            margin-bottom: 2rem;
+        }
+
+        .contact-form .form-control {
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .contact-form .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.25);
+        }
+
+        .contact-form .form-control::placeholder {
+            color: #999;
+        }
+
+        .contact-form select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 12px center;
+            background-repeat: no-repeat;
+            background-size: 16px;
+        }
+
+        .contact-form .btn-primary {
+            background: var(--gradient-primary);
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .contact-form .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .form-message {
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .form-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .form-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* Social Media */
+        .social-media {
+            margin-top: 3rem;
+        }
+
+        .social-media h4 {
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: var(--shadow-hover);
+            color: var(--white);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-button a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 1.8rem;
+            text-decoration: none;
+            box-shadow: var(--shadow-hover);
+            transition: var(--transition);
+        }
+
+        .whatsapp-button a:hover {
+            transform: scale(1.1);
+            color: var(--white);
+        }
+
+        .whatsapp-tooltip {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .whatsapp-button:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .hero-features {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .paint-brush-icon {
+                font-size: 8rem;
+            }
+            
+            .brush-stroke {
+                width: 100px;
+                left: 110%;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .service-card,
+            .contact-card {
+                margin-bottom: 2rem;
+            }
+            
+            .whatsapp-button {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .whatsapp-button a {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .btn-hero {
+                width: 100%;
+                margin-right: 0;
+            }
+            
+            .paint-brush-icon {
+                font-size: 6rem;
+            }
+            
+            .drop {
+                width: 15px;
+                height: 15px;
+            }
+            
+            .social-links {
+                flex-wrap: wrap;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-primary);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-color);
+        }
+
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(0);
+            animation: ripple-animation 0.6s linear;
+            pointer-events: none;
+        }
+        
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-paint-brush me-2"></i>
+                <span class="brand-text">Boya Ustası</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Hizmetler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Galeri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="paint-drops">
+            <div class="drop drop-1"></div>
+            <div class="drop drop-2"></div>
+            <div class="drop drop-3"></div>
+            <div class="drop drop-4"></div>
+            <div class="drop drop-5"></div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            <span class="highlight">Profesyonel</span>
+                            <br>Boya Hizmetleri
+                        </h1>
+                        <p class="hero-subtitle">
+                            Evinizi ve işyerinizi kaliteli boya hizmetleriyle güzelleştiriyoruz. 
+                            Uzman ekibimizle, modern teknikler ve kaliteli malzemeler kullanarak 
+                            hayalinizdeki mekânları yaratıyoruz.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#services" class="btn btn-primary btn-hero">
+                                <i class="fas fa-palette me-2"></i>Hizmetlerimiz
+                            </a>
+                            <a href="#contact" class="btn btn-outline-light btn-hero">
+                                <i class="fas fa-phone me-2"></i>İletişim
+                            </a>
+                        </div>
+                        <div class="hero-features">
+                            <div class="feature-item">
+                                <i class="fas fa-medal"></i>
+                                <span>15+ Yıl Tecrübe</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Garantili Hizmet</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Hızlı Teslimat</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <div class="paint-brush-container">
+                            <i class="fas fa-paint-brush paint-brush-icon"></i>
+                            <div class="brush-stroke"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Hizmetlerimiz</h2>
+                    <p class="section-subtitle">Profesyonel boya hizmetleriyle mekanlarınızı yeniliyoruz</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4>İç Mekan Boyama</h4>
+                        <p>Evinizin içini modern renkler ve kaliteli boyalarla yeniliyoruz. Duvar, tavan ve ahşap yüzeylerde uzman hizmet.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Duvar boyama</li>
+                            <li><i class="fas fa-check"></i> Tavan boyama</li>
+                            <li><i class="fas fa-check"></i> Ahşap boyama</li>
+                            <li><i class="fas fa-check"></i> Dekoratif boyama</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4>Dış Mekan Boyama</h4>
+                        <p>Binanızın dış cephesini hava koşullarına dayanıklı boyalarla koruyoruz ve güzelleştiriyoruz.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Cephe boyama</li>
+                            <li><i class="fas fa-check"></i> Balkon boyama</li>
+                            <li><i class="fas fa-check"></i> Çelik yapı boyama</li>
+                            <li><i class="fas fa-check"></i> Su yalıtımı</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h4>Dekoratif Boyama</h4>
+                        <p>Özel tekniklerle mekanlarınıza artistik dokunuşlar ekliyoruz. Duvar kağıdı ve özel efektler.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Sünger tekniği</li>
+                            <li><i class="fas fa-check"></i> Patina boyama</li>
+                            <li><i class="fas fa-check"></i> Stencil boyama</li>
+                            <li><i class="fas fa-check"></i> Duvar kağıdı</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Çalışmalarımız</h2>
+                    <p class="section-subtitle">Tamamladığımız projelerden örnekler</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Modern Salon Boyama" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h5>Modern Salon Boyama</h5>
+                            <p>Zarif renk geçişleri ile modern salon tasarımı</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Dış Cephe Yenileme" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h5>Dış Cephe Yenileme</h5>
+                            <p>Binanın tamamı yenilendi, dayanıklı boyalar kullanıldı</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Çocuk Odası Boyama" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h5>Çocuk Odası Boyama</h5>
+                            <p>Renkli ve eğlenceli çocuk odası tasarımı</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Ofis Boyama" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h5>Ofis Boyama</h5>
+                            <p>Profesyonel ve modern ofis alanı boyama</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Dekoratif Duvar" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h5>Dekoratif Duvar</h5>
+                            <p>Özel tekniklerle hazırlanan dekoratif duvar</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Villa Dış Boyama" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h5>Villa Dış Boyama</h5>
+                            <p>Lüks villa dış cephe boyama projesi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">İletişim</h2>
+                    <p class="section-subtitle">Bize ulaşın, projenizi görüşelim</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Telefon</h4>
+                        <p>Hemen arayın, ücretsiz keşif için randevu alın</p>
+                        <a href="tel:+905551234567" class="contact-link">
+                            +90 555 123 45 67
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Adres</h4>
+                        <p>Hizmet alanımız ve ofis adresimiz</p>
+                        <span class="contact-link">
+                            İstanbul, Türkiye<br>
+                            Tüm İstanbul'a hizmet
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>Çalışma Saatleri</h4>
+                        <p>Size uygun saatlerde hizmet veriyoruz</p>
+                        <span class="contact-link">
+                            Pazartesi - Cumartesi<br>
+                            08:00 - 18:00
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="contact-form-card">
+                        <h3 class="text-center mb-4">Hızlı Teklif Formu</h3>
+                        <form id="contactForm" class="contact-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Adınız Soyadınız *" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Telefon Numaranız">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="E-posta Adresiniz">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <select class="form-control" id="subject" name="subject">
+                                            <option value="">Hizmet Türü Seçin</option>
+                                            <option value="İç Mekan Boyama">İç Mekan Boyama</option>
+                                            <option value="Dış Mekan Boyama">Dış Mekan Boyama</option>
+                                            <option value="Dekoratif Boyama">Dekoratif Boyama</option>
+                                            <option value="Genel Bilgi">Genel Bilgi</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Projeniz hakkında detaylar... *" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-paper-plane me-2"></i>Teklif İsteyin
+                                </button>
+                            </div>
+                        </form>
+                        <div id="formMessage" class="mt-3" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <div class="social-media">
+                        <h4>Sosyal Medya</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2025 Profesyonel Boya Ustası. Tüm hakları saklıdır.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-button">
+        <a href="https://wa.me/905551234567?text=Merhaba, boya hizmetiniz hakkında bilgi almak istiyorum." target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <div class="whatsapp-tooltip">WhatsApp ile mesaj gönderin</div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize animations and interactions
+            initializeAnimations();
+            initializeNavbar();
+            initializeScrollAnimations();
+            initializeContactForm();
+            
+            // Add loading animation to elements
+            const animatedElements = document.querySelectorAll('.service-card, .gallery-item, .contact-card');
+            animatedElements.forEach((element, index) => {
+                element.style.animationDelay = `${index * 0.1}s`;
+                element.classList.add('fade-in');
+            });
+        });
+
+        // Initialize navbar scroll effects
+        function initializeNavbar() {
+            const navbar = document.querySelector('.custom-navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+            
+            // Smooth scroll for navigation links
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
+                    if (href.startsWith('#')) {
+                        e.preventDefault();
+                        const targetId = href.substring(1);
+                        const targetSection = document.getElementById(targetId);
+                        
+                        if (targetSection) {
+                            const offsetTop = targetSection.offsetTop - 80;
+                            window.scrollTo({
+                                top: offsetTop,
+                                behavior: 'smooth'
+                            });
+                        }
+                        
+                        // Close mobile menu if open
+                        const navbarCollapse = document.querySelector('.navbar-collapse');
+                        if (navbarCollapse.classList.contains('show')) {
+                            const bootstrapCollapse = new bootstrap.Collapse(navbarCollapse);
+                            bootstrapCollapse.hide();
+                        }
+                    }
+                });
+            });
+        }
+
+        // Initialize scroll animations
+        function initializeScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements for scroll animations
+            const elementsToAnimate = document.querySelectorAll('.service-card, .gallery-item, .contact-card');
+            elementsToAnimate.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(element);
+            });
+        }
+
+        // Initialize animations
+        function initializeAnimations() {
+            // Add hover effects to service cards
+            const serviceCards = document.querySelectorAll('.service-card');
+            serviceCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+            
+            // Add hover effects to gallery items
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            galleryItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+            
+            // Animate paint drops
+            animatePaintDrops();
+        }
+
+        // Animate paint drops
+        function animatePaintDrops() {
+            const drops = document.querySelectorAll('.drop');
+            
+            drops.forEach((drop, index) => {
+                // Random movement animation
+                setInterval(() => {
+                    const randomX = Math.random() * 20 - 10;
+                    const randomY = Math.random() * 20 - 10;
+                    drop.style.transform = `translate(${randomX}px, ${randomY}px) rotate(${Math.random() * 360}deg)`;
+                }, 3000 + index * 500);
+            });
+        }
+
+        // Initialize contact form interactions
+        function initializeContactForm() {
+            // Handle contact form submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Basic form validation
+                    const name = document.getElementById('name').value;
+                    const message = document.getElementById('message').value;
+                    
+                    if (!name || !message) {
+                        showFormMessage('Lütfen ad ve mesaj alanlarını doldurunuz.', 'error');
+                        return;
+                    }
+                    
+                    // Simulate form submission (replace with actual form handling)
+                    showFormMessage('Mesajınız başarıyla gönderildi! En kısa sürede size dönüş sağlayacağız.', 'success');
+                    contactForm.reset();
+                });
+            }
+            
+            // Add click tracking for contact links
+            const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+            phoneLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    console.log('Phone number clicked:', this.href);
+                });
+            });
+            
+            // WhatsApp button interactions
+            const whatsappButton = document.querySelector('.whatsapp-button a');
+            if (whatsappButton) {
+                whatsappButton.addEventListener('click', function() {
+                    console.log('WhatsApp button clicked');
+                });
+                
+                // Add floating animation
+                whatsappButton.addEventListener('mouseenter', function() {
+                    this.style.animation = 'none';
+                    this.style.transform = 'scale(1.1)';
+                });
+                
+                whatsappButton.addEventListener('mouseleave', function() {
+                    this.style.animation = 'pulse 2s infinite';
+                    this.style.transform = 'scale(1)';
+                });
+            }
+        }
+
+        // Show form message
+        function showFormMessage(message, type) {
+            const messageDiv = document.getElementById('formMessage');
+            messageDiv.innerHTML = `<div class="form-message ${type}">${message}</div>`;
+            messageDiv.style.display = 'block';
+            
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+            }, 5000);
+        }
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.paint-drops');
+            
+            parallaxElements.forEach(element => {
+                const speed = 0.5;
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // Add click effect to buttons
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('btn')) {
+                // Create ripple effect
+                const ripple = document.createElement('span');
+                const rect = e.target.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                
+                e.target.style.position = 'relative';
+                e.target.style.overflow = 'hidden';
+                e.target.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            }
+        });
+
+        // Performance optimization: Debounce scroll events
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Apply debounce to scroll events
+        const debouncedScroll = debounce(function() {
+            // Scroll-based animations here
+        }, 10);
+
+        window.addEventListener('scroll', debouncedScroll);
+
+        // Add accessibility improvements
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Tab') {
+                document.body.classList.add('using-keyboard');
+            }
+        });
+
+        document.addEventListener('mousedown', function() {
+            document.body.classList.remove('using-keyboard');
+        });
+
+        // Add error handling for images
+        document.addEventListener('error', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.target.style.display = 'none';
+                console.log('Image failed to load:', e.target.src);
+            }
+        }, true);
+    </script>
+</body>
+</html>
