@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dijital Pazarlama Ajansı - Web Tasarım, SEO, Google Ads, Sosyal Medya</title>
+    <meta name="description" content="Profesyonel web tasarım, SEO, Google Ads ve sosyal medya yönetimi hizmetleri. Dijital dünyada markanızı güçlendiriyoruz.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Modern Color Palette */
+        :root {
+            --primary-color: #6366F1;
+            --secondary-color: #8B5CF6;
+            --accent-color: #EC4899;
+            --success-color: #10B981;
+            --warning-color: #F59E0B;
+            --danger-color: #EF4444;
+            --dark-color: #1F2937;
+            --light-color: #F9FAFB;
+            --white: #FFFFFF;
+            --gray-50: #F8FAFC;
+            --gray-100: #F1F5F9;
+            --gray-200: #E2E8F0;
+            --gray-300: #CBD5E1;
+            --gray-400: #94A3B8;
+            --gray-500: #64748B;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1E293B;
+            --gray-900: #0F172A;
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, #6366F1, #8B5CF6);
+            --gradient-secondary: linear-gradient(135deg, #8B5CF6, #EC4899);
+            --gradient-accent: linear-gradient(135deg, #EC4899, #F59E0B);
+            --gradient-dark: linear-gradient(135deg, #1F2937, #374151);
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            
+            /* Border Radius */
+            --radius-sm: 0.375rem;
+            --radius: 0.5rem;
+            --radius-md: 0.75rem;
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+            
+            /* Transitions */
+            --transition: all 0.3s ease;
+            --transition-fast: all 0.15s ease;
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--gray-700);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--gray-900);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        /* Navigation */
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-sm);
+            padding: 1rem 0;
+            transition: var(--transition);
+        }
+
+        .navbar-custom.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--gray-700);
+            font-weight: 500;
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--primary-color);
+            background: var(--gray-50);
+        }
+
+        .btn-cta {
+            background: var(--gradient-primary);
+            border: none;
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236366F1' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title .highlight {
+            background: var(--gradient-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--gray-500);
+            font-weight: 500;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn-primary-custom {
+            background: var(--gradient-primary);
+            border: none;
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+            color: var(--white);
+        }
+
+        .btn-secondary-custom {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 1rem 2rem;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-secondary-custom:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* Floating Elements */
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .floating-icon {
+            position: absolute;
+            color: var(--primary-color);
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-icon:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            font-size: 3rem;
+            animation-delay: 0s;
+        }
+
+        .floating-icon:nth-child(2) {
+            top: 40%;
+            right: 15%;
+            font-size: 2.5rem;
+            animation-delay: 1s;
+        }
+
+        .floating-icon:nth-child(3) {
+            bottom: 30%;
+            left: 15%;
+            font-size: 2rem;
+            animation-delay: 2s;
+        }
+
+        .floating-icon:nth-child(4) {
+            top: 60%;
+            right: 20%;
+            font-size: 2.5rem;
+            animation-delay: 3s;
+        }
+
+        .floating-icon:nth-child(5) {
+            bottom: 20%;
+            right: 10%;
+            font-size: 1.5rem;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            border: 1px solid var(--gray-100);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-color);
+        }
+
+        .service-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--white);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--gray-900);
+        }
+
+        .service-card p {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            color: var(--gray-600);
+        }
+
+        .service-features li i {
+            color: var(--success-color);
+            margin-right: 0.75rem;
+            font-size: 0.875rem;
+        }
+
+        /* Portfolio Section */
+        .portfolio-section {
+            padding: 6rem 0;
+            background: var(--gray-50);
+        }
+
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            color: var(--gray-600);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-lg);
+            font-weight: 500;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--gradient-primary);
+            border-color: transparent;
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .portfolio-item {
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            background: var(--white);
+            height: 350px;
+            position: relative;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+        }
+
+        .portfolio-content {
+            padding: 1.5rem;
+        }
+
+        .portfolio-content h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--gray-900);
+        }
+
+        .portfolio-content p {
+            color: var(--gray-600);
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+        }
+
+        .portfolio-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .portfolio-tag {
+            background: var(--gray-100);
+            color: var(--gray-600);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius);
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-100);
+            height: 100%;
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .testimonial-rating {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-rating i {
+            color: var(--warning-color);
+            font-size: 1rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 3rem;
+            height: 3rem;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        .author-info h5 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            color: var(--gray-900);
+        }
+
+        .author-info p {
+            font-size: 0.875rem;
+            color: var(--gray-500);
+            margin: 0;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 6rem 0;
+            background: var(--gray-900);
+            color: var(--white);
+            position: relative;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFFFFF' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .contact-section .section-title {
+            color: var(--white);
+            background: var(--gradient-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-section .section-subtitle {
+            color: var(--gray-300);
+        }
+
+        .contact-info {
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-icon {
+            width: 3rem;
+            height: 3rem;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            color: var(--white);
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+        }
+
+        .contact-details p {
+            color: var(--gray-300);
+            margin: 0;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-form h3 {
+            color: var(--gray-900);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            color: var(--gray-700);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius);
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--white);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+        .form-control::placeholder {
+            color: var(--gray-400);
+        }
+
+        .btn-submit {
+            background: var(--gradient-primary);
+            border: none;
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--gray-900);
+            color: var(--gray-300);
+            padding: 3rem 0 1rem;
+            border-top: 1px solid var(--gray-800);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--white);
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+
+        .footer-section p,
+        .footer-section li {
+            color: var(--gray-400);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section a {
+            color: var(--gray-400);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--gray-800);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-400);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-800);
+            color: var(--gray-500);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3.5rem;
+            height: 3.5rem;
+            background: #25D366;
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+        }
+
+        .whatsapp-float a:hover {
+            transform: scale(1.1);
+            color: var(--white);
+            box-shadow: var(--shadow-xl);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.125rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .service-card,
+            .portfolio-item,
+            .testimonial-card {
+                margin-bottom: 2rem;
+            }
+            
+            .contact-form {
+                margin-top: 3rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .whatsapp-float {
+                bottom: 1rem;
+                right: 1rem;
+            }
+            
+            .whatsapp-float a {
+                width: 3rem;
+                height: 3rem;
+                font-size: 1.25rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .btn-primary-custom,
+            .btn-secondary-custom {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .portfolio-filters {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .filter-btn {
+                width: 200px;
+                text-align: center;
+            }
+        }
+
+        /* Loading Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--gray-100);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-primary);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-rocket me-2"></i>
+                Dijital Ajans
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Hizmetler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portföy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Referanslar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">İletişim</a>
+                    </li>
+                </ul>
+                <a href="#contact" class="btn-cta">
+                    <i class="fas fa-comments"></i>
+                    Ücretsiz Danışmanlık
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="floating-elements">
+            <i class="fas fa-chart-line floating-icon"></i>
+            <i class="fab fa-google floating-icon"></i>
+            <i class="fas fa-search floating-icon"></i>
+            <i class="fab fa-facebook floating-icon"></i>
+            <i class="fas fa-bullhorn floating-icon"></i>
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            Dijital Dünyada
+                            <span class="highlight">Markanızı Büyütün</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Web tasarım, SEO, Google Ads ve sosyal medya yönetimi ile dijital pazarlama hedeflerinize ulaşın. 
+                            Profesyonel ekibimizle online varlığınızı güçlendiriyoruz.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#services" class="btn-primary-custom">
+                                <i class="fas fa-rocket"></i>
+                                Hizmetlerimizi Keşfedin
+                            </a>
+                            <a href="#portfolio" class="btn-secondary-custom">
+                                <i class="fas fa-eye"></i>
+                                Çalışmalarımızı İnceleyin
+                            </a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">150+</span>
+                                <span class="stat-label">Tamamlanan Proje</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">95%</span>
+                                <span class="stat-label">Müşteri Memnuniyeti</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Yıl Tecrübe</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-center">
+                        <div style="font-size: 15rem; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; opacity: 0.8;">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">Hizmetlerimiz</h2>
+                    <p class="section-subtitle">
+                        Dijital pazarlama alanında sunduğumuz profesyonel hizmetlerle işletmenizi online dünyada öne çıkarıyoruz.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Web Tasarım</h3>
+                        <p>Modern, responsive ve kullanıcı dostu web siteleri tasarlıyoruz. Markanızı en iyi şekilde yansıtan özgün tasarımlar.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Responsive Tasarım</li>
+                            <li><i class="fas fa-check"></i> Hızlı Yükleme</li>
+                            <li><i class="fas fa-check"></i> SEO Uyumlu</li>
+                            <li><i class="fas fa-check"></i> Mobil Uyumlu</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>SEO Hizmetleri</h3>
+                        <p>Google'da üst sıralarda yer almanızı sağlayacak SEO stratejileri uyguluyoruz. Organik trafiğinizi artırıyoruz.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Anahtar Kelime Analizi</li>
+                            <li><i class="fas fa-check"></i> İçerik Optimizasyonu</li>
+                            <li><i class="fas fa-check"></i> Teknik SEO</li>
+                            <li><i class="fas fa-check"></i> Link Building</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <h3>Google Ads</h3>
+                        <p>Etkili Google Ads kampanyalarıyla hedef kitlenize ulaşın. ROI odaklı reklam yönetimi sunuyoruz.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Kampanya Kurulumu</li>
+                            <li><i class="fas fa-check"></i> Anahtar Kelime Araştırması</li>
+                            <li><i class="fas fa-check"></i> A/B Testing</li>
+                            <li><i class="fas fa-check"></i> Performans Takibi</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h3>Sosyal Medya</h3>
+                        <p>Sosyal medya hesaplarınızı profesyonelce yönetiyoruz. İçerik üretiminden etkileşim artırımına kadar.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> İçerik Üretimi</li>
+                            <li><i class="fas fa-check"></i> Hesap Yönetimi</li>
+                            <li><i class="fas fa-check"></i> Reklam Kampanyaları</li>
+                            <li><i class="fas fa-check"></i> Analiz ve Raporlama</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">Portföyümüz</h2>
+                    <p class="section-subtitle">
+                        Tamamladığımız başarılı projeler ve müşterilerimizin dijital dönüşüm hikayeleri.
+                    </p>
+                </div>
+            </div>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Tümü</button>
+                <button class="filter-btn" data-filter="web">Web Tasarım</button>
+                <button class="filter-btn" data-filter="seo">SEO</button>
+                <button class="filter-btn" data-filter="ads">Google Ads</button>
+                <button class="filter-btn" data-filter="social">Sosyal Medya</button>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-image">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4>E-ticaret Web Sitesi</h4>
+                            <p>Modern e-ticaret sitesi tasarımı ve geliştirmesi. Kullanıcı dostu arayüz ve güvenli ödeme sistemi.</p>
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">Web Tasarım</span>
+                                <span class="portfolio-tag">E-ticaret</span>
+                                <span class="portfolio-tag">Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio-item" data-category="seo">
+                        <div class="portfolio-image">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4>SEO Başarı Hikayesi</h4>
+                            <p>6 ayda %300 organik trafik artışı sağlanan SEO projesi. Anahtar kelime sıralamaları önemli ölçüde iyileştirildi.</p>
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">SEO</span>
+                                <span class="portfolio-tag">Analiz</span>
+                                <span class="portfolio-tag">Optimizasyon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio-item" data-category="ads">
+                        <div class="portfolio-image">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4>Google Ads Kampanyası</h4>
+                            <p>ROI %400 artış sağlanan Google Ads kampanyası. Maliyet optimizasyonu ve hedefleme stratejileri.</p>
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">Google Ads</span>
+                                <span class="portfolio-tag">PPC</span>
+                                <span class="portfolio-tag">ROI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio-item" data-category="social">
+                        <div class="portfolio-image">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4>Sosyal Medya Yönetimi</h4>
+                            <p>3 ayda %250 takipçi artışı ve yüksek etkileşim oranları elde edilen sosyal medya projesi.</p>
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">Instagram</span>
+                                <span class="portfolio-tag">Facebook</span>
+                                <span class="portfolio-tag">İçerik</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-image">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4>Kurumsal Web Sitesi</h4>
+                            <p>Profesyonel kurumsal kimlik yansıtan web sitesi tasarımı. Modern ve etkileyici tasarım.</p>
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">Kurumsal</span>
+                                <span class="portfolio-tag">Tasarım</span>
+                                <span class="portfolio-tag">Branding</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio-item" data-category="seo">
+                        <div class="portfolio-image">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4>Yerel SEO Projesi</h4>
+                            <p>Yerel arama sonuçlarında 1. sayfada yer alma başarısı. Google My Business optimizasyonu.</p>
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">Yerel SEO</span>
+                                <span class="portfolio-tag">Google Maps</span>
+                                <span class="portfolio-tag">İşletme</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">Müşteri Görüşleri</h2>
+                    <p class="section-subtitle">
+                        Müşterilerimizin başarı hikayeleri ve bizim hakkımızdaki görüşleri.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Web sitesi yenileme projemizde mükemmel bir iş çıkardılar. Hem tasarım hem de SEO açısından harika sonuçlar aldık. Organik trafiğimiz 3 kat arttı!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AY</div>
+                            <div class="author-info">
+                                <h5>Ahmet Yılmaz</h5>
+                                <p>E-ticaret Girişimcisi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Google Ads kampanyalarımızı yönetiyorlar. İlk aydan itibaren ROI'muz %300 arttı. Profesyonel yaklaşımları ve sürekli optimizasyonları harika."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">EK</div>
+                            <div class="author-info">
+                                <h5>Elif Kaya</h5>
+                                <p>Restoran Sahibi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Sosyal medya hesaplarımızı yönetiyorlar. İçerik kalitesi ve etkileşim oranlarımız çok arttı. Marka bilinirliğimiz önemli ölçüde gelişti."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MÖ</div>
+                            <div class="author-info">
+                                <h5>Mehmet Özkan</h5>
+                                <p>Kuaför Salonu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">İletişim</h2>
+                    <p class="section-subtitle">
+                        Projenizi konuşmak ve ücretsiz danışmanlık almak için bizimle iletişime geçin.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Telefon</h4>
+                                <p>+90 555 123 45 67</p>
+                                <p>Pazartesi - Cuma: 09:00 - 18:00</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>E-posta</h4>
+                                <p>info@dijitalajans.com</p>
+                                <p>destek@dijitalajans.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Adres</h4>
+                                <p>İstanbul, Türkiye</p>
+                                <p>Tüm Türkiye'ye hizmet veriyoruz</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <h3>Ücretsiz Danışmanlık İsteyin</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label class="form-label">Ad Soyad *</label>
+                                <input type="text" class="form-control" name="name" required placeholder="Adınız ve soyadınız">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">E-posta *</label>
+                                        <input type="email" class="form-control" name="email" required placeholder="ornek@email.com">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Telefon</label>
+                                        <input type="tel" class="form-control" name="phone" placeholder="+90 5xx xxx xx xx">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Hizmet Türü</label>
+                                <select class="form-control" name="service">
+                                    <option value="">Hizmet seçin</option>
+                                    <option value="web-tasarim">Web Tasarım</option>
+                                    <option value="seo">SEO Hizmetleri</option>
+                                    <option value="google-ads">Google Ads</option>
+                                    <option value="sosyal-medya">Sosyal Medya Yönetimi</option>
+                                    <option value="tum-hizmetler">Tüm Hizmetler</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Mesaj *</label>
+                                <textarea class="form-control" name="message" rows="4" required placeholder="Projeniz hakkında detayları paylaşın..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">
+                                <i class="fas fa-paper-plane"></i>
+                                Mesaj Gönder
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Dijital Ajans</h4>
+                    <p>Dijital pazarlama alanında uzman ekibimizle, markanızı online dünyada güçlendiriyoruz.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Hizmetlerimiz</h4>
+                    <ul>
+                        <li><a href="#services">Web Tasarım</a></li>
+                        <li><a href="#services">SEO Hizmetleri</a></li>
+                        <li><a href="#services">Google Ads</a></li>
+                        <li><a href="#services">Sosyal Medya Yönetimi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Şirket</h4>
+                    <ul>
+                        <li><a href="#about">Hakkımızda</a></li>
+                        <li><a href="#portfolio">Portföy</a></li>
+                        <li><a href="#testimonials">Referanslar</a></li>
+                        <li><a href="#contact">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim Bilgileri</h4>
+                    <p><i class="fas fa-phone me-2"></i> +90 555 123 45 67</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@dijitalajans.com</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> İstanbul, Türkiye</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dijital Ajans. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/905551234567?text=Merhaba, dijital pazarlama hizmetleriniz hakkında bilgi almak istiyorum." target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeNavbar();
+            initializeAnimations();
+            initializePortfolioFilters();
+            initializeContactForm();
+            initializeScrollAnimations();
+        });
+
+        // Navbar scroll effects
+        function initializeNavbar() {
+            const navbar = document.querySelector('.navbar-custom');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Smooth scroll for navigation links
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
+                    if (href.startsWith('#')) {
+                        e.preventDefault();
+                        const targetId = href.substring(1);
+                        const targetSection = document.getElementById(targetId);
+                        
+                        if (targetSection) {
+                            const offsetTop = targetSection.offsetTop - 80;
+                            window.scrollTo({
+                                top: offsetTop,
+                                behavior: 'smooth'
+                            });
+                        }
+
+                        // Update active nav link
+                        navLinks.forEach(nl => nl.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        // Close mobile menu if open
+                        const navbarCollapse = document.querySelector('.navbar-collapse');
+                        if (navbarCollapse.classList.contains('show')) {
+                            const bootstrapCollapse = new bootstrap.Collapse(navbarCollapse);
+                            bootstrapCollapse.hide();
+                        }
+                    }
+                });
+            });
+        }
+
+        // Initialize animations
+        function initializeAnimations() {
+            // Add hover effects to service cards
+            const serviceCards = document.querySelectorAll('.service-card');
+            serviceCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Add hover effects to portfolio items
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            portfolioItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        }
+
+        // Portfolio filters
+        function initializePortfolioFilters() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all') {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 100);
+                        } else {
+                            const itemCategory = item.getAttribute('data-category');
+                            if (itemCategory === filterValue) {
+                                item.style.display = 'block';
+                                setTimeout(() => {
+                                    item.style.opacity = '1';
+                                    item.style.transform = 'scale(1)';
+                                }, 100);
+                            } else {
+                                item.style.opacity = '0';
+                                item.style.transform = 'scale(0.8)';
+                                setTimeout(() => {
+                                    item.style.display = 'none';
+                                }, 300);
+                            }
+                        }
+                    });
+                });
+            });
+        }
+
+        // Contact form handling
+        function initializeContactForm() {
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = new FormData(this);
+                    const name = formData.get('name');
+                    const email = formData.get('email');
+                    const message = formData.get('message');
+                    
+                    // Basic validation
+                    if (!name || !email || !message) {
+                        showNotification('Lütfen gerekli alanları doldurun.', 'error');
+                        return;
+                    }
+                    
+                    // Email validation
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        showNotification('Lütfen geçerli bir e-posta adresi girin.', 'error');
+                        return;
+                    }
+                    
+                    // Show success message
+                    showNotification('Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.', 'success');
+                    
+                    // Reset form
+                    this.reset();
+                    
+                    // In a real application, you would send the data to your server here
+                    console.log('Form submitted:', Object.fromEntries(formData));
+                });
+            }
+        }
+
+        // Show notification
+        function showNotification(message, type) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type === 'success' ? 'success' : 'danger'} position-fixed`;
+            notification.style.cssText = 'top: 20px; right: 20px; z-index: 9999; max-width: 300px;';
+            notification.innerHTML = `
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-triangle'} me-2"></i>
+                    <span>${message}</span>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Remove notification after 5 seconds
+            setTimeout(() => {
+                notification.remove();
+            }, 5000);
+        }
+
+        // Scroll animations
+        function initializeScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements for scroll animations
+            const elementsToAnimate = document.querySelectorAll('.service-card, .portfolio-item, .testimonial-card');
+            elementsToAnimate.forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(element);
+            });
+        }
+
+        // Add click effect to buttons
+        document.addEventListener('click', function(e) {
+            if (e.target.matches('.btn-primary-custom, .btn-secondary-custom, .btn-cta, .btn-submit')) {
+                // Create ripple effect
+                const ripple = document.createElement('span');
+                const rect = e.target.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.cssText = `
+                    position: absolute;
+                    border-radius: 50%;
+                    background: rgba(255, 255, 255, 0.3);
+                    transform: scale(0);
+                    animation: ripple-animation 0.6s linear;
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${x}px;
+                    top: ${y}px;
+                    pointer-events: none;
+                `;
+                
+                e.target.style.position = 'relative';
+                e.target.style.overflow = 'hidden';
+                e.target.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            }
+        });
+
+        // Performance optimization: Debounce scroll events
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Update active navigation on scroll
+        const debouncedScroll = debounce(function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        }, 10);
+
+        window.addEventListener('scroll', debouncedScroll);
+
+        // Add accessibility improvements
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Tab') {
+                document.body.classList.add('using-keyboard');
+            }
+        });
+
+        document.addEventListener('mousedown', function() {
+            document.body.classList.remove('using-keyboard');
+        });
+
+        // Preload important images and handle errors
+        document.addEventListener('error', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.target.style.display = 'none';
+                console.log('Image failed to load:', e.target.src);
+            }
+        }, true);
+
+        // Initialize stats counter animation
+        function animateStats() {
+            const stats = document.querySelectorAll('.stat-number');
+            
+            stats.forEach(stat => {
+                const finalValue = parseInt(stat.textContent);
+                let currentValue = 0;
+                const increment = finalValue / 50;
+                const isPercentage = stat.textContent.includes('%');
+                const hasPlus = stat.textContent.includes('+');
+                
+                const timer = setInterval(() => {
+                    currentValue += increment;
+                    if (currentValue >= finalValue) {
+                        currentValue = finalValue;
+                        clearInterval(timer);
+                    }
+                    
+                    let displayValue = Math.floor(currentValue);
+                    if (isPercentage) displayValue += '%';
+                    if (hasPlus) displayValue += '+';
+                    
+                    stat.textContent = displayValue;
+                }, 50);
+            });
+        }
+
+        // Trigger stats animation when hero section is visible
+        const heroObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    heroObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        const heroSection = document.querySelector('.hero-section');
+        if (heroSection) {
+            heroObserver.observe(heroSection);
+        }
+    </script>
+</body>
+</html>
