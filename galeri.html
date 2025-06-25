@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alanya boyacı galeri - Ev boyama, iş yeri boyama, dekoratif boyama çalışma örnekleri. Alanya boyacı projelerimizi inceleyin.">
+    <meta name="keywords" content="alanya boyacı galeri, boyama örnekleri, ev boyama galeri, iş yeri boyama örnekleri, dekoratif boyama">
+    <title>Alanya Boyacı Galeri | Boyama Örnekleri ve Projelerimiz</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h2><i class="fas fa-paint-brush"></i> Alanya Boyacı</h2>
+                </div>
+                
+
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                    <li class="nav-item"><a href="hizmetler.html" class="nav-link">Hizmetler</a></li>
+                    <li class="nav-item"><a href="galeri.html" class="nav-link active">Galeri</a></li>
+                    <li class="nav-item"><a href="hakkimizda.html" class="nav-link">Hakkımızda</a></li>
+                    <li class="nav-item"><a href="iletisim.html" class="nav-link">İletişim</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Alanya Boyacı Galeri</h1>
+                <p>Profesyonel Alanya boyacı ekibimizin gerçekleştirdiği projeleri inceleyin</p>
+                <nav class="breadcrumb">
+                    <a href="index.html">Ana Sayfa</a> / <span>Galeri</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="gallery-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Tümü</button>
+                <button class="filter-btn" data-filter="ev-boyama">Ev Boyama</button>
+                <button class="filter-btn" data-filter="is-yeri">İş Yeri</button>
+                <button class="filter-btn" data-filter="dis-cephe">Dış Cephe</button>
+                <button class="filter-btn" data-filter="dekoratif">Dekoratif</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-grid">
+        <div class="container">
+            <div class="gallery-items">
+                <!-- Ev Boyama -->
+                <div class="gallery-item" data-category="ev-boyama">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Alanya ev boyama örneği">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Modern Salon Boyama</h3>
+                            <p>Ev Boyama</p>
+                            <button class="view-btn" onclick="openModal(this)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="ev-boyama">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Alanya yatak odası boyama">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Yatak Odası Boyama</h3>
+                            <p>Ev Boyama</p>
+                            <button class="view-btn" onclick="openModal(this)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="ev-boyama">
+                    <img src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Alanya mutfak boyama">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Mutfak Boyama</h3>
+                            <p>Ev Boyama</p>
+                            <button class="view-btn" onclick="openModal(this)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- İş Yeri Boyama -->
+                <div class="gallery-item" data-category="is-yeri">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Alanya ofis boyama">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Modern Ofis Boyama</h3>
+                            <p>İş Yeri Boyama</p>
+                            <button class="view-btn" onclick="openModal(this)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="is-yeri">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Alanya mağaza boyama">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Mağaza Boyama</h3>
+                            <p>İş Yeri Boyama</p>
+                            <button class="view-btn" onclick="openModal(this)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="is-yeri">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Alanya restoran boyama">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Restoran Boyama</h3>
+                            <p>İş Yeri Boyama</p>
+                            <button class="view-btn" onclick="openModal(this)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dış Cephe -->
+                <div class="gallery-item" data-category="dis-cephe">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Alanya dış cephe boyama">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Apartman Dış Cephe</h3>
+                            <p>Dış Cephe Boyama</p>
+                            <button class="view-btn" onclick="openModal(this)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="dis-cephe">
+                    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Alanya villa dış boyama">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Villa Dış Boyama</h3>
+                            <p>Dış Cephe Boyama</p>
+                            <button class="view-btn" onclick="openModal(this)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dekoratif Boyama -->
+                <div class="gallery-item" data-category="dekoratif">
+                    <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Alanya dekoratif boyama">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Dekoratif Duvar Boyama</h3>
+                            <p>Dekoratif Boyama</p>
+                            <button class="view-btn" onclick="openModal(this)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="dekoratif">
+                    <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Alanya özel desen boyama">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Özel Desen Boyama</h3>
+                            <p>Dekoratif Boyama</p>
+                            <button class="view-btn" onclick="openModal(this)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="dekoratif">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Alanya çocuk odası boyama">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Çocuk Odası Boyama</h3>
+                            <p>Dekoratif Boyama</p>
+                            <button class="view-btn" onclick="openModal(this)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="ev-boyama">
+                    <img src="https://images.unsplash.com/photo-1560449752-84fd9f6d2d89?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Alanya banyo boyama">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Banyo Boyama</h3>
+                            <p>Ev Boyama</p>
+                            <button class="view-btn" onclick="openModal(this)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Stats -->
+    <section class="gallery-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Tamamlanan Proje</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Yıl Deneyim</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Mutlu Müşteri</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">%100</div>
+                    <div class="stat-label">Memnuniyet</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-caption" id="modalCaption"></div>
+        <div class="modal-nav">
+            <button class="modal-prev" onclick="prevImage()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="modal-next" onclick="nextImage()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Sizin Projeniz de Galerimizde Yer Alsın!</h2>
+                <p>Alanya boyacı ekibimiz ile profesyonel boyama hizmetleri için bize ulaşın.</p>
+                <div class="cta-buttons">
+                    <a href="iletisim.html" class="btn btn-primary">Teklif Al</a>
+                    <a href="hizmetler.html" class="btn btn-secondary">Hizmetlerimiz</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-paint-brush"></i> Alanya Boyacı</h3>
+                    <p>Alanya'nın en güvenilir boyacı hizmeti. Profesyonel ekibimiz ile evinizi ve iş yerinizi yenileyin.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Hizmetler</h4>
+                    <ul>
+                        <li><a href="hizmetler.html">Ev Boyama</a></li>
+                        <li><a href="hizmetler.html">İş Yeri Boyama</a></li>
+                        <li><a href="hizmetler.html">Dekoratif Boyama</a></li>
+                        <li><a href="hizmetler.html">Dış Cephe Boyama</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Sayfalar</h4>
+                    <ul>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="galeri.html">Galeri</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Alanya, Antalya</p>
+                        <p><i class="fas fa-phone"></i> 0242 XXX XX XX</p>
+                        <p><i class="fas fa-envelope"></i> info@alanyaboyaci.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Alanya Boyacı. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html> 

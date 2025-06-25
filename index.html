@@ -1,149 +1,238 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alanya Boya Ustası - İç & Dış Cephe Boyama Hizmeti</title>
-  <meta name="description" content="Alanya'nın en iyi boya ustası ile profesyonel iç cephe, dış cephe ve dekoratif boya hizmetleri. WhatsApp'tan hemen iletişime geçin!">
-  <meta name="keywords" content="alanya boya ustası, alanya boyacı, iç cephe boyası, dış cephe, dekoratif boya">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fdfcf9;
-      color: #333;
-    }
-    header {
-      background-color: #2c3e50;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-    }
-    header h1 {
-      font-size: 2.5em;
-      text-align: center;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      color: #2c3e50;
-    }
-    .services, .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .service-box {
-      background: #f1f1f1;
-      padding: 20px;
-      border-radius: 8px;
-      flex: 1 1 200px;
-      text-align: center;
-    }
-    .gallery img {
-      width: 300px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-    .about p {
-      font-size: 1.1em;
-      color: #444;
-      line-height: 1.6;
-    }
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .contact-form button {
-      background: #2980b9;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-size: 1em;
-      cursor: pointer;
-    }
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      padding: 15px;
-      border-radius: 50%;
-      font-size: 24px;
-      text-decoration: none;
-      z-index: 999;
-    }
-    footer {
-      text-align: center;
-      background: #222;
-      color: white;
-      padding: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alanya boyacı - Profesyonel boya hizmetleri, ev boyama, iş yeri boyama, dekoratif boyama. Alanya'nın en kaliteli boyacı hizmeti.">
+    <meta name="keywords" content="alanya boyacı, boyacı alanya, ev boyama, iş yeri boyama, boya badana, dekoratif boyama, duvar boyama">
+    <meta name="author" content="Alanya Boyacı">
+    <title>Alanya Boyacı - Profesyonel Boya Hizmetleri | Ana Sayfa</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Alanya Boyacı - Profesyonel Boya Hizmetleri">
+    <meta property="og:description" content="Alanya'nın en deneyimli boyacı ekibi ile ev, iş yeri ve dekoratif boyama hizmetleri">
+    <meta property="og:type" content="website">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h2><i class="fas fa-paint-brush"></i> Alanya Boyacı</h2>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Ana Sayfa</a></li>
+                    <li class="nav-item"><a href="hizmetler.html" class="nav-link">Hizmetler</a></li>
+                    <li class="nav-item"><a href="galeri.html" class="nav-link">Galeri</a></li>
+                    <li class="nav-item"><a href="hakkimizda.html" class="nav-link">Hakkımızda</a></li>
+                    <li class="nav-item"><a href="iletisim.html" class="nav-link">İletişim</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<a class="whatsapp-btn" href="https://wa.me/905555555555" target="_blank">&#x1F4AC;</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Alanya'nın En Güvenilir <span class="highlight">Boyacı</span> Hizmeti</h1>
+                    <p>Profesyonel Alanya boyacı ekibimiz ile evinizi ve iş yerinizi hayallerinizdeki renklere boyayın. Kaliteli malzeme, deneyimli kadro ve uygun fiyatlarla hizmetinizdeyiz.</p>
+                    <div class="hero-buttons">
+                        <a href="iletisim.html" class="btn btn-primary">
+                            <i class="fas fa-calculator"></i> Ücretsiz Teklif Al
+                        </a>
+                        <a href="hizmetler.html" class="btn btn-secondary">
+                            <i class="fas fa-paint-brush"></i> Hizmetlerimiz
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Alanya boyacı hizmeti">
+                </div>
+            </div>
+        </div>
+    </section>
 
-<header>
-  <h1>Alanya'da En İyi Boyacınız</h1>
-</header>
+    <!-- Services Preview -->
+    <section class="services-preview">
+        <div class="container">
+            <h2>Alanya Boyacı Hizmetlerimiz</h2>
+            <p class="section-subtitle">Alanya'da boyacı arıyorsanız doğru yerdesiniz! Profesyonel boyacı hizmetlerimiz ile mekanlarınızı yenileyin.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Ev Boyama</h3>
+                    <p>Alanya boyacı ekibimiz ile evinizin tüm odalarını profesyonelce boyayın. İç mekan ve dış cephe boyama hizmetleri.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>İş Yeri Boyama</h3>
+                    <p>Ofis, mağaza, fabrika gibi iş yerleriniz için profesyonel Alanya boyacı hizmeti. Hızlı ve kaliteli boyama garantisi.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Dekoratif Boyama</h3>
+                    <p>Özel desenler, dokulu boyalar ve dekoratif teknikler ile mekanlarınıza sanatsal dokunuş katın.</p>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <a href="hizmetler.html" class="btn btn-primary">Tüm Hizmetleri Gör</a>
+            </div>
+        </div>
+    </section>
 
-<section>
-  <h2>Hizmetlerimiz</h2>
-  <div class="services">
-    <div class="service-box">İç Cephe Boyası</div>
-    <div class="service-box">Dış Cephe Boyası</div>
-    <div class="service-box">Dekoratif Boya</div>
-    <div class="service-box">Renk Danışmanlığı</div>
-    <div class="service-box">Küf/Nem Temizliği</div>
-  </div>
-</section>
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <h2>Neden Bizim Alanya Boyacı Ekibimizi Seçmelisiniz?</h2>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>10+ Yıl Deneyim</h3>
+                    <p>Alanya'da 10 yılı aşkın süredir boyacı hizmeti veren deneyimli ekibimiz</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Kalite Garantisi</h3>
+                    <p>Tüm boyama işlerimizde kullandığımız malzemeler ve işçilik için garanti</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Zamanında Teslimat</h3>
+                    <p>Belirlenen sürede işinizi tamamlayan güvenilir Alanya boyacı hizmeti</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Uygun Fiyat</h3>
+                    <p>Alanya'da en uygun fiyatlarla profesyonel boyacı hizmeti almak için bizi arayın</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section>
-  <h2>Örnek İşler</h2>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1593062096033-9a26b09da705?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="İç cephe boya örneği">
-    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Dış cephe boyama işi">
-    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Dekoratif boya uygulaması">
-  </div>
-</section>
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Hemen Alanya Boyacı Ekibimizden Teklif Alın!</h2>
+                <p>Profesyonel boyama hizmetleri için bize ulaşın. Ücretsiz keşif ve fiyat teklifi.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>0242 XXX XX XX</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp: 0555 XXX XX XX</span>
+                    </div>
+                </div>
+                <a href="iletisim.html" class="btn btn-primary">İletişime Geç</a>
+            </div>
+        </div>
+    </section>
 
-<section class="about">
-  <h2>Hakkımızda</h2>
-  <p>Alanya Boya Ustası olarak uzun yıllardır profesyonel boya çözümleri sunuyoruz. İç ve dış cephelerde uzmanlaşmış ekibimizle kaliteli ve zamanında teslim garantisiyle çalışıyoruz. Alanya'da boya denince akla gelen ilk isim olmak için çalışıyoruz.</p>
-</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-paint-brush"></i> Alanya Boyacı</h3>
+                    <p>Alanya'nın en güvenilir boyacı hizmeti. Profesyonel ekibimiz ile evinizi ve iş yerinizi yenileyin.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Hizmetler</h4>
+                    <ul>
+                        <li><a href="hizmetler.html">Ev Boyama</a></li>
+                        <li><a href="hizmetler.html">İş Yeri Boyama</a></li>
+                        <li><a href="hizmetler.html">Dekoratif Boyama</a></li>
+                        <li><a href="hizmetler.html">Dış Cephe Boyama</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Sayfalar</h4>
+                    <ul>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="galeri.html">Galeri</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Alanya, Antalya</p>
+                        <p><i class="fas fa-phone"></i> 0242 XXX XX XX</p>
+                        <p><i class="fas fa-envelope"></i> info@alanyaboyaci.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Alanya Boyacı. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
 
-<section>
-  <h2>İletişim</h2>
-  <form class="contact-form">
-    <input type="text" placeholder="Adınız Soyadınız" required>
-    <input type="tel" placeholder="Telefon Numaranız" required>
-    <textarea rows="4" placeholder="Mesajınız"></textarea>
-    <button type="submit">Gönder</button>
-  </form>
-</section>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-<footer>
-  &copy; 2025 Alanya Boya Ustası - Tüm Hakları Saklıdır.
-</footer>
-
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 
